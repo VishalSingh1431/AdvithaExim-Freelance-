@@ -1,0 +1,91 @@
+/* Main heading styling */
+.main-heading {
+    text-align: center;
+    font-size: 4.5rem;
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  /* Container styling */
+  .container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .container2-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Styling for each container */
+  .container2-item {
+    position: relative; /* Makes this a reference for absolute elements */
+    flex: 1 1 30%;
+    margin: 10px;
+    text-align: center;
+    color: black; 
+    min-height: 200px; /* Ensure enough height for button placement */
+  }
+  
+  /* Image styling */
+  .container2-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Paragraph styling */
+  .container2-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  /* "More About" Button Styling */
+  .fixed-button {
+    position: absolute; /* Fix button at the bottom */
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: hsl(50, 100%, 50%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .fixed-button:hover {
+    background-color:hsl(91, 100%, 49%);
+  }
+  
+  /* Typing effect */
+  .animated-text-container {
+    display: inline-block; 
+    width: 100%; 
+    text-align: center; 
+  }
+  
+  .animated-text {
+    color: black;
+    white-space: nowrap; 
+    display: inline-block; 
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .container2-content {
+      flex-direction: column;
+    }
+  
+    .container2-item {
+      flex: 1 1 100%;
+    }
+  }
+  

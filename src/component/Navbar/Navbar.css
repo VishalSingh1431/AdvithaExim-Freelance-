@@ -1,0 +1,183 @@
+/* General Navbar Styling */
+.navbar {
+  width: 100%;
+  height: 150px;
+  background-color: hsl(50, 96%, 51%);
+  color: white;
+  position: relative;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(240, 207, 207, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  width: 95%;
+  max-width: 1200px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  z-index: 20;
+  font-size: 25px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  padding: 15px; /* Increased padding for larger hover area */
+}
+
+/* Navigation Links */
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-links li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+}
+
+.navbar-links li a:hover,
+.navbar-links li a.active-link {
+  color: white;
+}
+
+/* Underline Animation for Active Link */
+.navbar-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #fafafa;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-links li a.active-link::after,
+.navbar-links li a:hover::after {
+  width: 100%;
+}
+
+/* Contact Button */
+.navbar-contact .contact-button {
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+.navbar-contact .contact-button:hover {
+  background-color: wheat;
+}
+
+/* Products Dropdown */
+.products-link {
+  position: relative;
+}
+
+.products-link .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position dropdown below the "Products" link */
+  left: 0;
+  background-color: hsl(50, 87%, 61%);
+  padding: 10px;
+  border-radius: 8px;
+  width: 250px;
+  text-align: center;
+  z-index: 100;
+}
+
+.products-link:hover .dropdown {
+  display: block;
+}
+
+.products-link .dropdown ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.products-link .dropdown-item {
+  position: relative;
+}
+
+.products-link .dropdown-item .sub-dropdown {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%; /* Position sub-dropdown to the right of the parent dropdown */
+  background-color: hsl(50, 87%, 61%);
+  padding: 10px;
+  border-radius: 8px;
+  width: 250px;
+  text-align: left;
+  z-index: 100;
+}
+
+.products-link .dropdown-item:hover .sub-dropdown {
+  display: block;
+}
+
+.products-link .dropdown li {
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+.products-link .dropdown li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.products-link .dropdown li a:hover {
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: hsl(50, 87%, 61%);
+    padding: 10px;
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    width: 100vw; /* Ensure the menu doesn't extend beyond 100vw */
+    border-radius: 8px;
+    text-align: center;
+    z-index: 10;
+  }
+
+  .navbar-links.mobile {
+    display: flex;
+  }
+
+  .navbar-contact {
+    margin-top: 10px;
+  }
+}

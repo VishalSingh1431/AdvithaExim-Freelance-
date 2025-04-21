@@ -1,0 +1,76 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* General Text Size Adjustments for Small Screens */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar-logo h2 {
+      font-size: 22px; /* Decrease logo font size */
+    }
+  
+    .navbar-links li a {
+      font-size: 16px; /* Smaller text for navigation links */
+    }
+  
+    .contact-button {
+      font-size: 16px; /* Smaller font size for the contact button */
+    }
+  
+    /* Heading Text Sizes */
+    h1 {
+      font-size: 24px; /* Smaller h1 for mobile */
+    }
+  
+    h2 {
+      font-size: 20px; /* Smaller h2 for mobile */
+    }
+  
+    h3 {
+      font-size: 18px; /* Smaller h3 for mobile */
+    }
+  
+    h4 {
+      font-size: 16px; /* Smaller h4 for mobile */
+    }
+  
+    h5 {
+      font-size: 14px; /* Smaller h5 for mobile */
+    }
+  
+    h6 {
+      font-size: 12px; /* Smaller h6 for mobile */
+    }
+  
+    /* Paragraph Text */
+    p {
+      font-size: 14px; /* Decrease paragraph text size */
+      line-height: 1.5; /* Increase line height for better readability */
+    }
+  
+    /* Links (Anchor Tags) */
+    a {
+      font-size: 14px; /* Decrease link font size */
+    }
+  
+    /* Adjusting Button Sizes */
+    .contact-button {
+      padding: 8px 12px; /* Smaller padding for buttons */
+      font-size: 16px; /* Smaller button text */
+    }
+  
+    /* Adjusting Product Dropdowns */
+    .products-link .dropdown {
+      width: 200px; /* Decrease dropdown width */
+    }
+  
+    .products-link .dropdown-item {
+      font-size: 14px; /* Smaller font for dropdown items */
+    }
+  
+    .products-link .sub-dropdown {
+      width: 180px; /* Smaller sub-dropdown width */
+    }
+  }
+  

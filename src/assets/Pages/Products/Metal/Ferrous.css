@@ -1,0 +1,253 @@
+/* Full-width image section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 40vw;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 50vw;
+  object-fit: cover;
+  animation: zoomIn 10s infinite alternate;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.hero-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* About section */
+.about-section {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+  font-size: 18px;
+  color: #333;
+  animation: slideUp 1.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Subsections layout */
+.subsections-container {
+  background: hsl(50, 87%, 61%);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.subsection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  position: relative; /* Ensure proper stacking context */
+  z-index: 1; /* Ensure subsections stay above other content */
+}
+
+.subsection:hover {
+  transform: translateY(-10px);
+}
+
+.subsection.left,
+.subsection.right {
+  flex-direction: column;
+}
+
+.subsection-image {
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.animated-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.subsection:hover .animated-image {
+  transform: scale(1.1);
+}
+
+.subsection-content {
+  width: 100%;
+  text-align: center;
+}
+
+.subsection-title {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+.subsection-desc {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  animation: fadeInRight 1s ease-in-out;
+  white-space: normal;
+}
+
+/* Nested sections */
+.nested-sections {
+  opacity: 0;
+  visibility: hidden;
+  padding: 20px;
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 2; /* Ensure nested sections stay above subsections */
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, max-height 0.5s ease-in-out;
+  /* max-height: 0; */
+  overflow: hidden;
+  position: relative; /* Ensure proper stacking context */
+}
+
+.subsection:hover .nested-sections {
+  opacity: 1;
+  visibility: visible;
+  max-height: 100%;
+  overflow: visible; /* Ensure content is visible */
+}
+
+.nested-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.nested-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.nested-text {
+  width: 100%;
+  text-align: center;
+}
+
+.nested-title {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.nested-desc {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.6;
+  overflow: hidden;
+  white-space: normal;
+  animation: typing 3s steps(40, end) forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+  .subsection {
+    flex-direction: row;
+  }
+  .subsection.left {
+    flex-direction: row;
+  }
+  .subsection.right {
+    flex-direction: row-reverse;
+  }
+  .subsection-content {
+    text-align: left;
+  }
+  .nested-section {
+    flex-direction: row;
+    text-align: left;
+  }
+  .nested-text {
+    text-align: left;
+  }
+}

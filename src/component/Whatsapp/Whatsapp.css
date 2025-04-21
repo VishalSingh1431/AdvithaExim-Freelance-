@@ -1,0 +1,22 @@
+.whatsapp-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+  }
+  
+  .whatsapp-icon {
+    width: 80px; /* Increased size for better visibility */
+    height: 80px; /* Increased size */
+    color: #25d366; /* WhatsApp green color */
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .whatsapp-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  

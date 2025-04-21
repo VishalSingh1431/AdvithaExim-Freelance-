@@ -1,0 +1,84 @@
+.why-container {
+  /* padding: 40px 20px; */
+  text-align: center;
+}
+
+.why-container h1 {
+  font-size: 4.5rem; /* Bigger size */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean, modern font */
+  font-weight: 700; /* Bold text */
+  color: #fff; /* White text color */
+  text-align: center; /* Center the heading */
+  text-transform: capitalize; /* Capitalize each word */
+  letter-spacing: 3px; /* Letter spacing for a refined look */
+  background: hsl(50, 96%, 51%);/* Background color as a deep red */
+  padding: 20px; /* Add padding inside the heading */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2); /* Shadow for a lifted look */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.why-container h1:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3); /* Bigger shadow on hover */
+  background: hsl(50, 96%, 51%);;/* Change background on hover */
+}
+.why-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 30px;
+  margin: 25px;
+}
+
+.text-column {
+  flex: 1;
+  max-width: 600px;
+  padding: 20px;
+  text-align: left;
+}
+
+.text-column h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.text-column p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.image-column {
+  flex: 1;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.image-column img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .why-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-column, .image-column {
+    max-width: 100%;
+  }
+
+  .image-column img {
+    width: 80%;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,133 @@
+/* Footer styling */
+.footer {
+  background-color: hsl(50, 96%, 51%);
+  color: white;
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+  animation: fadeIn 1s ease-out;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-logo {
+  height: 85px; /* Slightly larger logo */
+  animation: logoBounce 1.2s ease-in-out infinite alternate;
+}
+
+.footer-section h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid white;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #2600ff;
+  transform: translateX(5px);
+}
+
+.contact-info p {
+  margin-bottom: 8px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.7rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: #ffdd57;
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  /* background: ; */
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  font-size: 1.2rem;
+  /* opacity: 0.9; */
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Animation for logo bouncing */
+@keyframes logoBounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-8px);
+  }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .footer-section {
+      margin-bottom: 20px;
+  }
+
+  .social-icons {
+      justify-content: center;
+  }
+}
